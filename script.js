@@ -8,23 +8,24 @@ function playerSelection(){
     let choice = prompt("What is your choice: ");
     return choice.toLowerCase();
 }
-// create a function that take a the computer and the player  choice as a prameter  and return the result
+// create a function that take a the computer and the player  choice as a prameter  and return a number
 function playRound(ComputerChoice,playerSelection){
+    
      if(playerSelection == ComputerChoice ){
-        return "tie";}
+        return 0;}
 
      else if(playerSelection == "rock" && ComputerChoice == "scissor"){
-        return "You win! Rock beat scissor";
+        return 1;
     
     }
      else if(playerSelection == "scissor" && ComputerChoice == "paper"){
-        return "You win ! scissor beat paper" ;
+        return 1 ;
     }
     else if(playerSelection == "paper" && ComputerChoice == "rock"){
-        return "You win ! paper beat rock" ;
+        return 1 ;
 
     }
     else {
-        return ("you lose! " + ComputerChoice +"beat " + playerSelection);
+        return -1;
     }
 }
